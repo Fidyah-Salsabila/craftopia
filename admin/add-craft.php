@@ -2,6 +2,12 @@
 
     require '../function/function.php';
 
+    session_start();
+
+    if(!$_SESSION['isAdmin']){
+        header('Location: ./login.php');
+    }
+
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $data = query("SELECT * FROM craft WHERE id = '$id'")[0];
