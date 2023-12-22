@@ -26,15 +26,13 @@
     <div class="box">
         <h2>Kontak Kami</h2>
         <p>Kami sangat menghargai masukan dan pendapat Anda. Jika Anda memiliki saran atau sanggahan terkait website kami, silakan beri tahu kami.</p>
-        <form action="">
+        <form action="./function/add_contact.php" method="post" >
             <label for="nama">Nama Pertama</label>
-            <input type="text" id="nama" placeholder="Your First Name" required>
+            <input type="text" name="name" id="nama" placeholder="Your First Name" required>
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="you@example.com" required>
-            <label for="nomor">Nomor Telepon</label>
-            <input type="text" id="nomor" placeholder="+62" required>
+            <input type="email" name="email" id="email" placeholder="you@example.com" required>
             <label for="deskripsi">Apa yang dapat Kami bantu?</label>
-            <input type="" id="deskripsi" placeholder="Description" required >
+            <input type="" id="deskripsi" name="description" placeholder="Description" required >
             <button>Kirim</button>
         </form>
     </div>

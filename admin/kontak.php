@@ -34,7 +34,7 @@
             <li><a href="./index.php">Kerajinan Tangan</a></li>
             <li><a href="#">Kontak</a></li>
         </ul>
-        <a href="/" class="logout-btn" >
+        <a href="./login.php?logout=1" class="logout-btn" >
             Keluar
         </a>
     </nav>
