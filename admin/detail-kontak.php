@@ -54,7 +54,7 @@
                 </label>
                 <label for="">
                     <span>desckripsi </span>
-                    <textarea readonly name="" id="" cols="30" rows="10"><?= $data['deskripsi'] ?></textarea>
+                    <textarea readonly name="" id="" cols="30" rows="10"><?= $data['description'] ?></textarea>
                 </label>
 
             </form>
