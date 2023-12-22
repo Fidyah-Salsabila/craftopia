@@ -54,14 +54,14 @@
     <div class="catalog">
         <?php foreach($data as $d) :?>
             <div class="card">
-                <img src="http://via.placeholder.com/640x360" alt="">
+                <img src="./image/<?= $d['thumbnail'] ?>" alt="">
                 <div class="card-body">
                     <span class="category-pill" >
-                        <?= $d['difficulty'] ?>
+                        <?= $d['difficulty'] ?? '' ?>
                     </span>
-                    <h5><?= $d['title'] ?></h5>
-                    <p><?= $d['description'] ?></p>
-                    <a href="./detail.php">Selengkapnya</a>
+                    <h5><?= $d['title' ?? ''] ?></h5>
+                    <p><?= $d['description'] ?? '' ?></p>
+                    <a href="./detail.php?id=<?= $d['id'] ?>">Selengkapnya</a>
                 </div>
             </div>
         <?php  endforeach;?>
