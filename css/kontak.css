@@ -1,0 +1,54 @@
+@import url('./color.css');
+@import url('./navbar.css');
+
+.box {
+    width: 500px;
+    height: 550px;
+    margin: 40px auto 20px;
+    text-align: center;
+}
+.box h2 {
+    text-align: center;
+    padding: 10px auto;
+    font-size: 32px;
+}
+.box p {
+    text-align: justify;
+}
+.box form label {
+    display: block;
+    font-size: 17px;
+    font-weight: 800px;
+    font-weight: 550;
+    text-align: left;
+}
+.box form input {
+    width: 490px;
+    margin: 5px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    width: 500px;
+    height: 40px;
+    border: 2px solid #E48F45;
+    border-radius: 5px;
+    background-color: #E48F45;
+    color: #ffffff;
+    font-size: 18px;
+}
+footer {
+    align-items: center;
+    background-color: var(--primary);
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+}
+footer .contact {
+    display: flex;
+    column-gap: 20px;
+}

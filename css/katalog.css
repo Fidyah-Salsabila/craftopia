@@ -1,0 +1,83 @@
+@import url('./color.css');
+@import url('./navbar.css');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 30px;
+}
+
+.header .category {
+    display: flex;
+    column-gap: 20px;
+}
+
+.header .category li {
+    list-style-type: none;
+}
+
+.header .category li a{
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 5px;
+}
+
+.header .category li a.selected{
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+}
+
+.catalog {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: space-evenly;
+    row-gap: 40px;
+    padding-bottom: 120px;
+}
+
+.catalog .card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
+}
+
+.catalog .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog .card .card-body {
+   padding: 14px 21px;
+   padding-bottom: 30px;
+}
+
+.catalog .card .card-body .category-pill {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 4px 12px;
+    width: fit-content;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.catalog .card .card-body h5 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.catalog .card .card-body p {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.catalog .card .card-body a {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}

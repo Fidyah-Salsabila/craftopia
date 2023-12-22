@@ -1,0 +1,9 @@
+@import url('../color.css');
+@import url('./navbar.css');
+@import url('./table.css');
+@import url('./header.css');
+
+.container {
+    margin: 50px 40px;
+}
+

@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.header a {
+    text-decoration: none;
+    background-color: var(--primary);
+    height: fit-content;
+    color: #fff;
+    padding: 8px 28px;
+    font-size: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+}
