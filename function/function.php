@@ -1,5 +1,8 @@
 <?php 
 
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
     $db = mysqli_connect('localhost', 'root', '', 'craftopia_db');
 
     function query($query){
@@ -22,29 +25,12 @@
 
         global $db;
 
-        // $files = $_FILES['tools'];
-        // $file_count = count($files['name']);
-
-        // for ($i=0; $i < $file_count; $i++) { 
-        //     print 'File Name: ' . $files['name'][$i];
-        //     print 'File Type: ' . $files['type'][$i];
-        //     print 'File Size: ' . $files['size'][$i];
-        //     print 'File tmp : ' . $files['tmp_name'][$i];
-        //     print '<br>';
-
-        //     $gambar_loc = $files['tmp_name'][$i];
-        //     $gambar = $files['name'][$i];
-        //     $gambar = str_replace(" ", "-", $gambar);
-
-        //     move_uploaded_file($gambar_loc, '../image/'.$gambar);
-        // }
-        
-        // $gambar_loc = $_FILES['thumbnail']['tmp_name'];
+        $gambar_loc = $_FILES['thumbnail']['tmp_name'];
         $gambar = $_FILES['thumbnail']['name'];
-        // $gambar = str_replace(" ", "-", $gambar);
+        $gambar = str_replace(" ", "-", $gambar);
         
-        // move_uploaded_file($gambar_loc, '../image/'.$gambar);
-        
+        move_uploaded_file($gambar_loc, '../image/'.$gambar);
+
         $title = $_POST['title'];
         $source = $_POST['source'];
         $estimate = $_POST['estimate'];
@@ -62,6 +48,37 @@
         ";
 
         mysqli_query($db, $query);
+
+        $files = $_FILES['tools'];
+        $file_count = count($files['name']);
+
+        $latest_data = query("SELECT * FROM craft ORDER BY id DESC")[0];
+        $latest_data_id = $latest_data['id'];
+
+        for ($i=0; $i < $file_count; $i++) { 
+            print 'File Name: ' . $files['name'][$i];
+            print 'File Type: ' . $files['type'][$i];
+            print 'File Size: ' . $files['size'][$i];
+            print 'File tmp : ' . $files['tmp_name'][$i];
+            print '<br>';
+
+            $gambar_loc = $files['tmp_name'][$i];
+            $gambar = $files['name'][$i];
+            $gambar = str_replace(" ", "-", $gambar);
+
+            move_uploaded_file($gambar_loc, '../image/'.$gambar);
+
+            $query = "
+                INSERT INTO 
+                    tools
+                (`craft_id`, `image`)
+                VALUES
+                ('$latest_data_id', '$gambar')
+            ";
+
+            mysqli_query($db, $query);
+        }
+
 
         return mysqli_affected_rows($db);
 

@@ -1,3 +1,16 @@
+<?php 
+
+    require './function/function.php';
+
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $data = query("SELECT * FROM craft WHERE id = '$id'")[0];
+        $image_data = query("SELECT image, craft_id FROM tools JOIN craft ON craft.id = tools.craft_id WHERE craft.id = '$id'");
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,15 +41,15 @@
     </div>
     <div class="container">
         <div class="gambar">
-            <img src="/pictures/section1.svg" alt="">
-            <img src="/pictures/section1.svg" alt="">
-            <img src="/pictures/section1.svg" alt="">
+        <?php foreach($image_data as $d) :?>
+            <img src="./image/<?= $d['image'] ?>" alt="">
+        <?php  endforeach;?>
         </div>
         <div class="judul">
-            <h3>JUDUL KERAJINAN</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis adipisci quo praesentium, harum temporibus sapiente perspiciatis totam delectus consequuntur impedit? Necessitatibus officia nisi laboriosam officiis ad architecto placeat neque voluptatum?</p>
+            <h3><?= $data['title'] ?></h3>
+            <p><?= $data['description'] ?></p>
             <h3>LANGKAH-LANGKAH</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum optio fugiat deleniti, recusandae dignissimos voluptates praesentium nostrum neque quaerat provident autem quae? Similique id fugit architecto commodi fugiat, unde beatae!</p>
+            <p><?= $data['steps'] ?></p>
         </div>
     </div>
 </body>

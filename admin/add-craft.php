@@ -1,5 +1,7 @@
 <?php 
 
+    error_reporting(E_ERROR | E_PARSE);
+
     require '../function/function.php';
 
     session_start();
@@ -66,7 +68,7 @@
                 </label>
                 <label for="">
                     <span>Link Video </span>
-                    <input type="text" value="<?= $data['video'] ?>" name="video" id="">
+                    <input type="text" value="<?= $data['video'] ?? '' ?>" name="video" id="">
                 </label>
                 <label for="">
                     <span>Alat & Bahan </span>
@@ -74,28 +76,28 @@
                 </label>
                 <label for="">
                     <span>Judul </span>
-                    <input type="text" value="<?= $data['title'] ?>" name="title" id="">
+                    <input type="text" value="<?= $data['title'] ?? '' ?>" name="title" id="">
                 </label>
                 <label for="">
                     <span>Sumber </span>
-                    <input  value="<?= $data['source'] ?>" type="text" name="source" id="">
+                    <input  value="<?= $data['source'] ?? '' ?>" type="text" name="source" id="">
                 </label>
                 <label for="">
                     <span>Estimasi Pekerjaan </span>
-                    <input type="text" value="<?= $data['estimate'] ?>" name="estimate" id="">
+                    <input type="text" value="<?= $data['estimate'] ?? '' ?>" name="estimate" id="">
                 </label>
                 <label for="">
                     <span>Kesulitan </span>
                     <select name="difficulty" id="">
                         <option value=""></option>
-                        <option <?= (isset($data['estimate']) && $data['estimate']) == 'Sulit' ? 'selected' : ''  ?> value="Sulit">Sulit</option>
-                        <option <?= (isset($data['estimate']) && $data['estimate']) == 'Mudah' ? 'selected' : ''  ?> value="Mudah">Mudah</option>
-                        <option <?= (isset($data['estimate']) && $data['estimate']) == 'Sedang' ? 'selected' : ''  ?> value="Sedang">Sedang</option>
+                        <option <?= (isset($data['estimate']) && $data['estimate']) == '3' ? 'selected' : ''  ?> value="3">Sulit</option>
+                        <option <?= (isset($data['estimate']) && $data['estimate']) == '1' ? 'selected' : ''  ?> value="1">Mudah</option>
+                        <option <?= (isset($data['estimate']) && $data['estimate']) == '2' ? 'selected' : ''  ?> value="2">Sedang</option>
                     </select>
                 </label>
                 <label for="">
                     <span>Deskripsi </span>
-                    <textarea name="description" id="" cols="30" rows="10"><?= $data['description'] ?></textarea>
+                    <textarea name="description" id="" cols="30" rows="10"><?= $data['description'] ?? '' ?></textarea>
                 </label>
                 <label for="">
                     <span>Langkah Langkah </span>
