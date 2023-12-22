@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/landing.css">
 </head>
 <body>
-    <nav>
+    <!-- `<nav>
         <div class="logo">
             <h1>C<span style="color: var(--primary);" >r</span>a<span style="color: var(--primary);" >f</span>topia.id</h1>
         </div>
@@ -22,7 +22,7 @@
             <i class="bi bi-twitter"></i>
             <i class="bi bi-instagram"></i>
         </div>
-    </nav>
+    </nav>` -->
     <div class="section1">
         <img src="./pictures/section1.svg" alt="">
         <p class="satu">
