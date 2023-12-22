@@ -2,6 +2,12 @@
 
     require '../function/function.php';
 
+    session_start();
+
+    if(!$_SESSION['isAdmin']){
+        header('Location: ./login.php');
+    }
+
     if(isset($_GET['delete'])){
         deleteItem();
     }
@@ -28,7 +34,7 @@
             <li><a href="">Kerajinan Tangan</a></li>
             <li><a href="./kontak.php">Kontak</a></li>
         </ul>
-        <a href="/" class="logout-btn" >
+        <a href="./login.php?logout=1" class="logout-btn" >
             Keluar
         </a>
     </nav>

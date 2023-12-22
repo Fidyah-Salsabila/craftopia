@@ -2,6 +2,12 @@
 
     require '../function/function.php';
 
+    session_start();
+
+    if(!$_SESSION['isAdmin']){
+        header('Location: ./login.php');
+    }
+
     if(isset($_GET['delete'])){
         deleteContact();
     }
