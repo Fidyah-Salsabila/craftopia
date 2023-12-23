@@ -81,3 +81,11 @@
     font-weight: 600;
     font-size: 14px;
 }
+
+.divide {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgb(213, 213, 213);
+    padding-top: 8px;
+    margin-top: 20px;
+}

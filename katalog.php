@@ -62,6 +62,10 @@
                     <h5><?= $d['title' ?? ''] ?></h5>
                     <p><?= $d['description'] ?? '' ?></p>
                     <a href="./detail.php?id=<?= $d['id'] ?>">Selengkapnya</a>
+                    <div class="divide" >
+                        <span><?= $d['source'] ?></span>
+                        <span><?= $d['estimate'] ?></span>
+                    </div>
                 </div>
             </div>
         <?php  endforeach;?>
