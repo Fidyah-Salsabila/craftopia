@@ -27,7 +27,7 @@
 .header .category li a.selected{
     color: var(--primary);
     font-weight: 700;
-    border-bottom: 2px solid var(--primary);
+    /* border-bottom: 2px solid var(--primary); */
 }
 
 .catalog {

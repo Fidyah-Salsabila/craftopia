@@ -36,8 +36,8 @@
             <i class="bi bi-instagram"></i>
         </div>
     </nav>
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XopP25MVFwo?si=veFYkJs9lWUe6YwK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="iframe">
+        <?= $data['video'] ?>
     </div>
     <div class="container">
         <div class="gambar">

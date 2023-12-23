@@ -44,10 +44,10 @@
     <div class="header">
         <h2>Kerajinan Tangan</h2>
         <ul class="category" >
-            <li><a class="selected" href="./">Semua</a></li>
-            <li><a href="./index.php?difficulty=3">Sulit</a></li>
-            <li><a href="./index.php?difficulty=2">Sedang</a></li>
-            <li><a href="./index.php?difficulty=1">Mudah</a></li>
+            <li><a class="selected" href="./katalog.php">Semua</a></li>
+            <li><a href="./katalog.php?difficulty=3">Sulit</a></li>
+            <li><a href="./katalog.php?difficulty=2">Sedang</a></li>
+            <li><a href="./katalog.php?difficulty=1">Mudah</a></li>
         </ul>
     </div>
 
