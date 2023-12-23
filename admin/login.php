@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 
     if($_POST['username'] == 'admin'){
 
-        if($_POST['password'] == '151022'){
+        if($_POST['password'] == '151023'){
             
             
             $_SESSION['isAdmin'] = true;
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
             <label for="username">Username</label>
             <input name="username" type="text" id="username" required>
             <label for="password">Kata Sandi</label>
-            <input name="password" type="text" id="password" required>
+            <input name="password" type="password" id="password" required>
             <button type="submit" name="submit" >Masuk</button>
         </form>
         <img class="dua" src="../pictures/login2.svg" alt="">
