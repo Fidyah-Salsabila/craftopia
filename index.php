@@ -12,6 +12,11 @@
         <div class="logo">
             <h1>C<span style="color: var(--primary);" >r</span>a<span style="color: var(--primary);" >f</span>topia.id</h1>
         </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <ul>
             <li><a href="./index.php">Beranda</a></li>
             <li><a href="./katalog.php">Katalog</a></li>
@@ -23,19 +28,19 @@
             <i class="bi bi-instagram"></i>
         </div>
     </nav>
-    <div class="section1">
-        <img src="./pictures/section1.svg" alt="">
+    <div class="section1">  
         <p class="satu">
             find <span>creatifity</span> to <br> make <span>happy</span>
         </p>
         <p class="dua">Jelajahi lautan ide kreatif, temukan keindahan yang menginspirasi, <br> dan wujudkan inovasi yang mengubah dunia.</p>
         <a href="./katalog.php">Mulai Explore</a>
+        <img src="./pictures/section1.svg" alt="">
     </div>
     <div class="section2">
         <img src="./pictures/section2.svg" alt="">
         <div class="kata">
             <p class="tiga">Siapa Kami</p>
-            <p class="empat">c<span>r</span>a<span>f</span>topia.<span>id</span> didirikan oleh sekelompok seniman yang memiliki hasrat untuk berbagi keindahan seni dan kerajinan tangan dengan dunia. Kami percaya bahwa setiap karya memiliki cerita, dan kami ingin menjadi platform untuk membagikan kisah tersebut.</p>
+            <p class="empat">C<span>r</span>a<span>f</span>topia.<span>id</span> didirikan oleh sekelompok seniman yang memiliki hasrat untuk berbagi keindahan seni dan kerajinan tangan dengan dunia. Kami percaya bahwa setiap karya memiliki cerita, dan kami ingin menjadi platform untuk membagikan kisah tersebut.</p>
         </div>
     </div>
     <footer>
@@ -46,5 +51,16 @@
             <i class="bi bi-instagram"></i>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+          navList.classList.toggle('show');
+        });
+    });
+    </script>
 </body>
 </html>

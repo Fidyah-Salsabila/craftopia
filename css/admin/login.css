@@ -1,4 +1,4 @@
-@import url('../color.css');
+/* @import url('../color.css');
 
 body {
     overflow: hidden;
@@ -43,4 +43,87 @@ div .satu {
 div .dua {
     display: flex;
     margin-left: 1140px;
+} */
+
+
+@import url('../color.css');
+
+body {
+    overflow: hidden;
+}
+
+div {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* Gunakan 100vh agar div mencakup seluruh tinggi viewport */
+}
+
+div h3 {
+    margin: -220px auto 80px;
+}
+
+div form label {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    padding-right: 400px;
+}
+
+div form input {
+    width: 90%; /* Menggunakan persentase agar lebih responsif */
+    max-width: 490px; /* Batasi lebar input */
+    margin: 5px;
+    height: 40px;
+    border: 2px solid #E48F45;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    width: 90%; /* Menggunakan persentase agar lebih responsif */
+    max-width: 500px; /* Batasi lebar tombol */
+    height: 40px;
+    border: 2px solid #E48F45;
+    border-radius: 5px;
+    background-color: #E48F45;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+div .satu {
+    display: flex;
+    flex-direction: column; /* Mengubah orientasi menjadi kolom pada layar kecil */
+}
+
+div .dua {
+    display: flex;
+    margin-left: auto; /* Gunakan margin-left: auto agar fleksibel di sisi kanan */
+    margin-right: 5%; /* Jaga jarak dari sisi kanan */
+}
+
+/* Media Query untuk perangkat dengan lebar layar maksimal 768px */
+@media screen and (max-width: 768px) {
+    div {
+        height: auto; /* Secara otomatis menyesuaikan tinggi sesuai kontennya */
+    }
+
+    div h3 {
+        margin: 20px auto 40px;
+    }
+
+    div form label,
+    div form input,
+    button {
+        width: 90%; /* Menggunakan persentase agar lebih responsif */
+        max-width: none; /* Hapus batasan lebar maksimum */
+        padding-right: 0; /* Hapus padding kanan pada label */
+        margin: 5px auto; /* Menjaga margin agar seragam */
+    }
+
+    div .dua {
+        margin-left: auto; /* Tetap gunakan margin-left: auto */
+        margin-right: auto; /* Tetap gunakan margin-right: auto */
+    }
 }

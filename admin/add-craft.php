@@ -34,6 +34,11 @@
         <div class="logo">
             <h1>C<span style="color: var(--primary);" >r</span>a<span style="color: var(--primary);" >f</span>topia.id</h1>
         </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <ul>
             <li><a href="">Kerajinan Tangan</a></li>
             <li><a href="">Kontak</a></li>
@@ -66,10 +71,15 @@
                     <span>Thumbnail </span>
                     <input type="file" name="thumbnail" id="">
                 </label>
-                <label for="">
+                <!-- <label for="">
                     <span>Link Video </span>
                     <input type="text" value="<?= $data['video'] ?? '' ?>" name="video" id="">
+                </label> -->
+                <label for="">
+                    <span>Link Video</span>
+                    <input type="text" value="<?= $data['video'] ?? '' ?>" name="video" id="videoInput">
                 </label>
+
                 <label for="">
                     <span>Alat & Bahan </span>
                     <input type="file" multiple name="tools[]" id="">
@@ -117,6 +127,35 @@
     </div>
 
     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const videoInput = document.getElementById('videoInput');
+
+        // Pemeriksaan format saat input berubah
+        videoInput.addEventListener('input', function () {
+            const inputValue = videoInput.value.trim();
+
+            // Pemeriksaan format YouTube
+            if (inputValue.includes('youtube.com') || inputValue.includes('youtu.be')) {
+                // Konversi ke format iframe jika link YouTube
+                const videoId = extractYouTubeVideoId(inputValue);
+                if (videoId) {
+                    const iframeCode = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
+                    videoInput.value = iframeCode;
+                }
+            }
+        });
+
+        // Fungsi untuk mengekstrak ID video YouTube
+        function extractYouTubeVideoId(url) {
+            const regex = /(youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+            const match = url.match(regex);
+            return match && match[2] ? match[2] : null;
+        }
+    });
+    </script>
+
+
+    <script>
             tinymce.init({
                 selector: 'textarea#steps',
                 toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent',
@@ -127,6 +166,17 @@
                     });
                 }
             });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+          navList.classList.toggle('show');
+        });
+    });
     </script>
 
 </body>

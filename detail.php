@@ -25,6 +25,11 @@
         <div class="logo">
             <h1>C<span style="color: var(--primary);" >r</span>a<span style="color: var(--primary);" >f</span>topia.id</h1>
         </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <ul>
             <li><a href="./index.php">Beranda</a></li>
             <li><a href="./katalog.php">Katalog</a></li>
@@ -52,5 +57,16 @@
             <p><?= $data['steps'] ?></p>
         </div>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+          navList.classList.toggle('show');
+        });
+    });
+    </script>
 </body>
 </html>

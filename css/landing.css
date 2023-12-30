@@ -1,6 +1,11 @@
 @import url('./color.css');
 @import url('./navbar.css');
 
+
+nav .contact {
+  display: flex;
+  column-gap: 20px;
+}
 .section1 {
     margin-top: 180px;
     width: 100%;
@@ -35,6 +40,7 @@
     border-radius: 7px;
     box-shadow: 25px 25px 10px #c7c4c4;
     margin-right: 100px;
+    margin-top: -320px;
 }
 .section2 {
     width: 100%;
@@ -65,7 +71,7 @@
 }
 .section2 .kata .empat span {
     color: var(--primary);
-    font-size: 22px;
+    /* font-size: 22px; */
 }
 
 footer {
@@ -79,4 +85,220 @@ footer {
 footer .contact {
     display: flex;
     column-gap: 20px;
+}
+
+
+/* Media Query untuk Tablet */
+@media screen and (max-width: 768px) {
+    nav {
+      padding: 0 20px;
+    }
+  
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        background-color: var(--white);
+        z-index: 1000;
+      }
+    
+      nav ul.show {
+        display: flex;
+      }
+    
+      .menu-toggle {
+        display: block;
+      }
+    
+      nav ul li {
+        margin: 10px 0;
+      }
+  
+    /* .section1 {
+      margin-top: 80px;
+    }
+  
+    .section1 .satu {
+      font-size: 40px;
+      margin-left: 20px;
+    }
+  
+    .section1 .dua {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  
+    .section1 a {
+      margin-left: 20px;
+      padding: 12px 30px;
+    }
+  
+    .section1 img {
+      margin-right: 20px;
+    }
+  
+    .section2 img {
+      margin: 80px 20px 0 20px;
+    } */
+
+
+    nav .contact {
+      display: none;
+    }
+    .section1 {
+        margin-top: 100px;
+        margin-left: -50px;
+        text-align: center;
+      }
+      
+      .section1 .satu {
+        font-size: 50px;
+      }
+      
+      .section1 .dua {
+        margin-top: 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 24px;
+      }
+      
+      .section1 a {
+        display: inline-block;
+        background-color: var(--primary);
+        text-decoration: none;
+        color: var(--white);
+        border-radius: 8px;
+        text-align: center;
+        padding: 15px 30px;
+      }
+      
+      .section1 img {
+        max-width: 100%; /* Tambahkan perubahan ini untuk responsif */
+        border-radius: 7px;
+        box-shadow: 0 0 10px #c7c4c4; /* Sesuaikan perubahan ini */
+        margin: 50px 15px;
+      }
+      
+      .section2 img {
+        display: none;
+      }
+  
+    .section2 .kata {
+      width: 95%;
+      margin: 20px;
+    }
+  
+    .section2 .kata .tiga {
+      font-size: 30px;
+    }
+  
+    .section2 .kata .empat {
+      font-size: 16px;
+    }
+  
+    footer {
+      padding: 0 20px;
+    }
+
+  
+  /* Media Query untuk Perangkat Seluler */
+  @media screen and (max-width: 480px) {
+    /* .section1 {
+      margin-top: 50px;
+    }
+  
+    .section1 .satu {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+  
+    .section1 .dua {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+  
+    .section1 a {
+      margin-left: 10px;
+      padding: 10px 20px;
+    }
+  
+    .section1 img {
+      margin-right: 10px;
+    }
+  
+    .section2 img {
+        display: none;
+      } */
+      
+      nav .contact {
+        display: none;
+      }
+      .section1 {
+        width: 90%;
+        margin-top: 80px;
+        margin-left: -40px;
+        text-align: center; /* Tambahkan perubahan ini untuk responsif */
+      }
+      
+      .section1 .satu {
+        font-size: 35px;
+      }
+      
+      .section1 .dua {
+        margin-top: 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 24px;
+        text-align: justify;
+      }
+      
+      .section1 a {
+        display: inline-block;
+        background-color: var(--primary);
+        text-decoration: none;
+        color: var(--white);
+        border-radius: 8px;
+        text-align: center;
+        padding: 15px 30px;
+      }
+      
+      .section1 img {
+        max-width: 100%; /* Tambahkan perubahan ini untuk responsif */
+        border-radius: 7px;
+        box-shadow: 0 0 10px #c7c4c4; /* Sesuaikan perubahan ini */
+        margin: 50px -60px;
+      }
+      
+      .section2 img {
+        /* max-width: 100%; 
+        border-radius: 10px;
+        margin: 50px 0 0 0; */
+        display: none;
+      }
+  
+    .section2 .kata {
+      width: 100%;
+      margin: 10px;
+    }
+  
+    .section2 .kata .tiga {
+      font-size: 24px;
+    }
+  
+    .section2 .kata .empat {
+      width: 90%;
+      text-align: justify;
+      justify-content: center;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+  
+    footer {
+      padding: 0 20px;
+    }
+  }
 }

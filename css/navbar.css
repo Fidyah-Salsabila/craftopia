@@ -23,3 +23,16 @@ nav .contact {
     display: flex;
     column-gap: 20px;
 }
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+  
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 5px 0;
+}

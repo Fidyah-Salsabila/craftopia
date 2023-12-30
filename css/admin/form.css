@@ -52,3 +52,35 @@ form label textarea:focus {
     color: #fff;
     border-radius: 8px;
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+      }
+    
+      nav ul {
+          display: none;
+          flex-direction: column;
+          text-align: center;
+          width: 100%;
+          position: absolute;
+          top: 60px; /* Sesuaikan dengan tinggi navbar */
+          left: 0;
+          background-color: var(--white);
+          z-index: 1000;
+        }
+    nav ul.show {
+        display: flex;
+      }
+    
+      .menu-toggle {
+        display: block;
+      }
+    
+      nav ul li {
+        display: none;
+      }
+      nav a {
+        display: none;
+      }
+}

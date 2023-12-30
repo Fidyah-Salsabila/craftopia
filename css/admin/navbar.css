@@ -29,3 +29,16 @@ nav .logout-btn {
     font-size: 14px;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+  
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 5px 0;
+}
+
